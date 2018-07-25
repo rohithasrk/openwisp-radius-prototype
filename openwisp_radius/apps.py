@@ -1,5 +1,5 @@
-from django.apps import AppConfig
+from django_freeradius.apps import DjangoFreeradiusConfig
 
 
-class OpenwispRadiusConfig(AppConfig):
+class OpenwispRadiusConfig(DjangoFreeradiusConfig):
     name = 'openwisp_radius'
