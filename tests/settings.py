@@ -1,24 +1,38 @@
 import os
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# Set DEBUG to False in production
+DEBUG = True
+
 SECRET_KEY = '&a@f(0@lrl%606smticbu20=pvribdvubk5=gjti8&n1y%bi&4'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DJANGO_FREERADIUS_API_TOKEN = "gsoc2018djfapitoken"
 
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # all-auth
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # openwisp2 modules
+    'openwisp_users',
+    'openwisp_radius',
+    # admin
+    'django.contrib.admin',
+    # rest framework
+    'rest_framework'
 ]
+
+AUTH_USER_MODEL = 'openwisp_users.User'
+SITE_ID = '1'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -51,7 +65,7 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'freeradius.db'),
     }
 }
 
