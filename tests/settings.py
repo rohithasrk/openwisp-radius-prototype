@@ -85,13 +85,21 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
 STATIC_URL = '/static/'
+
+# Swapper model definitions
+DJANGO_FREERADIUS_RADIUSREPLY_MODEL = "openwisp_radius.RadiusReply"
+DJANGO_FREERADIUS_RADIUSGROUPREPLY_MODEL = "openwisp_radius.RadiusGroupReply"
+DJANGO_FREERADIUS_RADIUSCHECK_MODEL = "openwisp_radius.RadiusCheck"
+DJANGO_FREERADIUS_RADIUSGROUPCHECK_MODEL = "openwisp_radius.RadiusGroupCheck"
+DJANGO_FREERADIUS_RADIUSACCOUNTING_MODEL = "openwisp_radius.RadiusAccounting"
+DJANGO_FREERADIUS_NAS_MODEL = "openwisp_radius.Nas"
+DJANGO_FREERADIUS_RADIUSUSERGROUP_MODEL = "openwisp_radius.RadiusUserGroup"
+DJANGO_FREERADIUS_RADIUSPOSTAUTH_MODEL = "openwisp_radius.RadiusPostAuth"
+DJANGO_FREERADIUS_RADIUSBATCH_MODEL = "openwisp_radius.RadiusBatch"
+DJANGO_FREERADIUS_RADIUSPROFILE_MODEL = "openwisp_radius.RadiusProfile"
+DJANGO_FREERADIUS_RADIUSUSERPROFILE_MODEL = "openwisp_radius.RadiusUserProfile"
