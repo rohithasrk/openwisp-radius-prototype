@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     # admin
     'django.contrib.admin',
     # rest framework
-    'rest_framework'
+    'rest_framework',
+    'django_filters'
 ]
 
 AUTH_USER_MODEL = 'openwisp_users.User'
