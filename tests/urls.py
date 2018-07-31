@@ -11,6 +11,6 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^', include('openwisp_radius.urls', namespace='freeradius')),
     url(r'^admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
