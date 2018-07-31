@@ -12,3 +12,5 @@ urlpatterns = [
     url(r'^', include('openwisp_radius.urls', namespace='freeradius')),
     url(r'^admin/', admin.site.urls),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
