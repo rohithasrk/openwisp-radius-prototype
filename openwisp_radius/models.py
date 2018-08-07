@@ -7,6 +7,7 @@ from django_freeradius.base.models import (AbstractNas, AbstractRadiusAccounting
                                            AbstractRadiusProfile, AbstractRadiusReply,
                                            AbstractRadiusUserGroup, AbstractRadiusUserProfile)
 from django_freeradius.utils import set_default_limits
+from swapper import swappable_setting
 
 from openwisp_users.mixins import OrgMixin
 
@@ -14,46 +15,55 @@ from openwisp_users.mixins import OrgMixin
 class RadiusCheck(OrgMixin, AbstractRadiusCheck):
     class Meta(AbstractRadiusCheck.Meta):
         abstract = False
+        swappable = swappable_setting('openwisp_radius', 'RadiusCheck')
 
 
 class RadiusAccounting(OrgMixin, AbstractRadiusAccounting):
     class Meta(AbstractRadiusAccounting.Meta):
         abstract = False
+        swappable = swappable_setting('openwisp_radius', 'RadiusAccounting')
 
 
 class RadiusReply(OrgMixin, AbstractRadiusReply):
     class Meta(AbstractRadiusReply.Meta):
         abstract = False
+        swappable = swappable_setting('openwisp_radius', 'RadiusReply')
 
 
 class RadiusGroupCheck(OrgMixin, AbstractRadiusGroupCheck):
     class Meta(AbstractRadiusGroupCheck.Meta):
         abstract = False
+        swappable = swappable_setting('openwisp_radius', 'RadiusGroupCheck')
 
 
 class RadiusGroupReply(OrgMixin, AbstractRadiusGroupReply):
     class Meta(AbstractRadiusGroupReply.Meta):
         abstract = False
+        swappable = swappable_setting('openwisp_radius', 'RadiusGroupReply')
 
 
 class RadiusPostAuth(OrgMixin, AbstractRadiusPostAuth):
     class Meta(AbstractRadiusPostAuth.Meta):
         abstract = False
+        swappable = swappable_setting('openwisp_radius', 'RadiusPostAuth')
 
 
 class RadiusUserGroup(OrgMixin, AbstractRadiusUserGroup):
     class Meta(AbstractRadiusUserGroup.Meta):
         abstract = False
+        swappable = swappable_setting('openwisp_radius', 'RadiusUserGroup')
 
 
 class Nas(OrgMixin, AbstractNas):
     class Meta(AbstractNas.Meta):
         abstract = False
+        swappable = swappable_setting('openwisp_radius', 'Nas')
 
 
 class RadiusBatch(OrgMixin, AbstractRadiusBatch):
     class Meta(AbstractRadiusBatch.Meta):
         abstract = False
+        swappable = swappable_setting('openwisp_radius', 'RadiusBatch')
 
 
 class RadiusProfile(OrgMixin, AbstractRadiusProfile):
@@ -64,6 +74,7 @@ class RadiusProfile(OrgMixin, AbstractRadiusProfile):
 
     class Meta(AbstractRadiusProfile.Meta):
         abstract = False
+        swappable = swappable_setting('openwisp_radius', 'RadiusProfile')
 
 
 class RadiusUserProfile(OrgMixin, AbstractRadiusUserProfile):
@@ -74,6 +85,7 @@ class RadiusUserProfile(OrgMixin, AbstractRadiusUserProfile):
 
     class Meta(AbstractRadiusUserProfile.Meta):
         abstract = False
+        swappable = swappable_setting('openwisp_radius', 'RadiusUserProfile')
 
 
 signals.post_save.connect(set_default_limits, sender=get_user_model())
