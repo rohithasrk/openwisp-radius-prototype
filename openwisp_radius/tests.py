@@ -8,12 +8,12 @@ from django_freeradius.tests.base.test_admin import BaseTestAdmin
 from django_freeradius.tests.base.test_api import BaseTestApi, BaseTestApiReject
 from django_freeradius.tests.base.test_batch_add_users import BaseTestCSVUpload
 from django_freeradius.tests.base.test_commands import BaseTestCommands
-from django_freeradius.tests.base.test_models import (BaseTestNas,
-                                                      BaseTestRadiusAccounting, BaseTestRadiusBatch,
-                                                      BaseTestRadiusCheck, BaseTestRadiusGroupCheck,
-                                                      BaseTestRadiusGroupReply, BaseTestRadiusPostAuth,
-                                                      BaseTestRadiusProfile, BaseTestRadiusReply,
-                                                      BaseTestRadiusUserGroup, BaseTestRadiusUserProfile)
+from django_freeradius.tests.base.test_models import (BaseTestNas, BaseTestRadiusAccounting,
+                                                      BaseTestRadiusBatch, BaseTestRadiusCheck,
+                                                      BaseTestRadiusGroupCheck, BaseTestRadiusGroupReply,
+                                                      BaseTestRadiusPostAuth, BaseTestRadiusProfile,
+                                                      BaseTestRadiusReply, BaseTestRadiusUserGroup,
+                                                      BaseTestRadiusUserProfile)
 from django_freeradius.tests.base.test_utils import BaseTestUtils
 from django_freeradius.tests.utils import FileMixin
 
