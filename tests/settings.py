@@ -98,8 +98,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
+LANGUAGE_CODE = 'en-gb'
+TIME_ZONE = 'Europe/Rome'
 USE_I18N = False
 USE_L10N = False
 USE_TZ = True
@@ -107,6 +107,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 EMAIL_PORT = '1025'
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
+
+# for development only
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Swapper model definitions
 DJANGO_FREERADIUS_RADIUSREPLY_MODEL = "openwisp_radius.RadiusReply"

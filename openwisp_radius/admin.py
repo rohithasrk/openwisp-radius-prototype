@@ -1,10 +1,16 @@
 from django.contrib import admin
-from django_freeradius.base.admin import *
+from django_freeradius.base.admin import (AbstractNasAdmin, AbstractRadiusAccountingAdmin,
+                                          AbstractRadiusBatchAdmin, AbstractRadiusCheckAdmin,
+                                          AbstractRadiusGroupCheckAdmin, AbstractRadiusGroupReplyAdmin,
+                                          AbstractRadiusPostAuthAdmin, AbstractRadiusProfileAdmin,
+                                          AbstractRadiusReplyAdmin, AbstractRadiusUserGroupAdmin,
+                                          AbstractRadiusUserProfileInline, AbstractUserAdmin)
 
 from openwisp_users.admin import UserAdmin
 from openwisp_utils.admin import MultitenantAdminMixin, MultitenantOrgFilter, MultitenantRelatedOrgFilter
 
-from .models import *
+from .models import (Nas, RadiusAccounting, RadiusBatch, RadiusCheck, RadiusGroupCheck, RadiusGroupReply,
+                     RadiusPostAuth, RadiusProfile, RadiusReply, RadiusUserGroup, RadiusUserProfile)
 
 
 @admin.register(RadiusCheck)
