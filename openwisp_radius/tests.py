@@ -18,6 +18,7 @@ from django_freeradius.tests.base.test_utils import BaseTestUtils
 from django_freeradius.tests.utils import FileMixin
 
 from openwisp_users.models import Organization
+from openwisp_users.tests.test_admin import TestUsersAdmin
 
 from .mixins import ApiParamsMixin, CallCommandMixin, CreateObjectsMixin
 from .models import *
@@ -133,4 +134,8 @@ class TestCSVUpload(BaseTestCSVUpload, TestCase,
 
 
 class TestUtils(BaseTestUtils, TestCase, CreateObjectsMixin, FileMixin):
+    pass
+
+
+class TestUsersIntegration(TestUsersAdmin):
     pass
