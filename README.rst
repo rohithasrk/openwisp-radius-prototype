@@ -1,6 +1,8 @@
 openwisp-radius-prototype
 =========================
 
+Moved to https://github.com/openwisp/openwisp-radius
+
 .. image:: https://travis-ci.org/rohithasrk/openwisp-radius-prototype.svg?branch=master
     :target: https://travis-ci.org/rohithasrk/openwisp-radius-prototype
 
